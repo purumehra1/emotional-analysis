@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Analysis App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            margin: 20px auto;
+            max-width: 640px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .video-feed {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .instructions {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .emotion-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .emotion-item {
+            background-color: #e8f0fe;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Analysis App</h1>
+        <div class="instructions">
+            <h2>How to Use</h2>
+            <p>Position your face in front of the camera. The app will detect your emotions in real-time.</p>
+            <p>Supported emotions:</p>
+            <div class="emotion-list">
+                <span class="emotion-item">Happy</span>
+                <span class="emotion-item">Sad</span>
+                <span class="emotion-item">Angry</span>
+                <span class="emotion-item">Neutral</span>
+                <span class="emotion-item">Fear</span>
+                <span class="emotion-item">Surprise</span>
+                <span class="emotion-item">Disgust</span>
+            </div>
+        </div>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video feed">
+        </div>
+    </div>
+</body>
+</html> 
